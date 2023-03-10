@@ -1,4 +1,4 @@
-console.log('Hello, world!'+ 5+2);
+console.log('Hello, world!' + 5 + 2);
 
 
 

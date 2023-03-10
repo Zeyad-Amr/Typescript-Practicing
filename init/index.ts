@@ -6,10 +6,10 @@ console.log(Math.floor(8));
 // tsc --w (file name)
 
 
-let age:number =40;
+let age: number = 40;
 
-if(age>30){
+if (age > 30) {
     console.log('Old');
-}else{
+} else {
     console.log('Young');
 }

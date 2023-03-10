@@ -1,7 +1,7 @@
 // ######################################################################################################
 console.log('\n########################## Typescript Type Aliases');
 
-type st= string;
+type st = string;
 
 let name1: st = 'John';
 name1 = 'Jane';
@@ -40,13 +40,13 @@ getAction(buttons);
 
 // extending type aliases
 
-type Last =Buttons&{last: boolean};
+type Last = Buttons & { last: boolean };
 
 function getAction2(buttons: Last) {
     console.log(`Up: ${buttons.up}, Down: ${buttons.down}, Left: ${buttons.left}, Right: ${buttons.right}, Last: ${buttons.last}`);
 }
 
-let buttons2 = {    
+let buttons2 = {
     up: 'move up',
     down: 'move down',
     left: 'move left',
@@ -61,9 +61,9 @@ getAction2(buttons2);
 console.log('\n########################## Typescript Literal Types');
 // Literal Types in Typescript
 
-type nums = -1|0|1;
+type nums = -1 | 0 | 1;
 
-function compare(a: nums, b: nums) :nums{
+function compare(a: nums, b: nums): nums {
     if (a === b) {
         return 0;
     }
@@ -93,7 +93,7 @@ console.log('\n########################## Typescript Tuple Types');
 type Person = readonly [string, number, boolean];
 
 let person: Person = ['John', 20, true];
-person= ['Jane', 20, true];
+person = ['Jane', 20, true];
 
 console.log(person);
 
@@ -114,7 +114,7 @@ console.log('\n########################## Typescript Void and Never Types');
 --- Function that void can only return undefined
 */
 
-function logging(message: string):void {
+function logging(message: string): void {
     console.log(message);
     return;
 }
@@ -131,8 +131,8 @@ const neverFunc = (message: string) => {
     // return 10;
 }
 
-const neverFunc2 = (message: string):never => {
-    while(true) {
+const neverFunc2 = (message: string): never => {
+    while (true) {
         console.log(message);
     }
     // return 10; // error
@@ -157,21 +157,21 @@ console.log('\n########################## Typescript Type Enums');
 const easy = 0;
 const medium = 1;
 const hard = 2;
-const Multiplier=(level: number) => level*10;
+const Multiplier = (level: number) => level * 10;
 
 enum Kids {
-    kid=0,
-    teen=1,
-    adult=2,
+    kid = 0,
+    teen = 1,
+    adult = 2,
     s
 }
 
-enum Levels{
+enum Levels {
     inmpossible,
-    easy=Kids.kid, 
-    medium=Kids.teen, 
-    hard=Kids.adult,
-    veryHard=Multiplier(medium),
+    easy = Kids.kid,
+    medium = Kids.teen,
+    hard = Kids.adult,
+    veryHard = Multiplier(medium),
     // impossible=Multiplier(veryHard) // error
 };
 
@@ -199,7 +199,7 @@ console.log('\n########################## Typescript Type Assertions');
 
 
 // let data:any = 1000; // error
-let data:any = "1000";
+let data: any = "1000";
 console.log((data as string).repeat(3));
 
 
@@ -216,19 +216,19 @@ console.log('\n########################## Typescript Union and Intersection Type
 --- If a union is OR then intersection is AND
 */
 
-type A={
+type A = {
     one: string,
     two: string
 
 }
 
-type B={
+type B = {
     three: string,
 }
 
-type C= A&B;
+type C = A & B;
 
-type D= A|B;
+type D = A | B;
 
 let ccc: C = {
     one: 'one',
@@ -237,7 +237,7 @@ let ccc: C = {
 }
 
 let ddd: D = {
- 
+
     three: 'three'
 }
 
