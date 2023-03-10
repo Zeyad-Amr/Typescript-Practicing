@@ -52,4 +52,20 @@ const addWithArrowFunction = (a, b) => {
 };
 console.log(addWithFunction(1, 2));
 console.log(addWithArrowFunction(1, 2));
+console.log('\n######################### Typescript Type Annotations with Objects');
+let employee = {
+    name: 'John',
+    age: 20,
+    salary: 1000,
+    isMarried: false,
+    skills: ['HTML', 'CSS', 'JS'],
+    childern: {
+        one: 'Jane',
+        two: 'Jack',
+    },
+};
+employee.age = 30;
+console.log(employee);
+console.log(employee.name);
+console.log(employee.age);
 //# sourceMappingURL=index.js.map

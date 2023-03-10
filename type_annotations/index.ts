@@ -1,3 +1,4 @@
+// ######################################################################################################
 console.log('\n######################### Typescript Type Annotations with Data Types');
 let isDone: boolean = false;
 let age: number = 20;
@@ -19,7 +20,7 @@ function add(a:number, b: number): number {
 
 console.log(add(1, 2));
 
-
+// ######################################################################################################
 console.log('\n######################### Typescript Type Annotations with Arrays');
 
 let array1: number[] = [1, 2, 3,4,5];
@@ -32,6 +33,8 @@ console.log(array2)
 console.log(array3)
 console.log(array4)
 
+
+// ######################################################################################################
 console.log('\n######################### Typescript Type Annotations with Functions');
 
 function showDetails(name: string, age: number, salary: number): string {
@@ -59,6 +62,7 @@ Type Annotations with Functions
 
 */
 
+// ######################################################################################################
 console.log('\n######################### Typescript Function Optional Parameters and Default Parameters');
 
 function showDetails1(name: string, age: number, salary?: number ): string {
@@ -94,7 +98,7 @@ function addAll(...nums:number[]): number {
 console.log(addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
 
-
+// ######################################################################################################
 console.log('\n######################### Typescript Type Annotations with Anonymous and Arrow Functions');
 
 const addWithFunction = function(a:number, b:number): number {
@@ -107,3 +111,39 @@ const addWithArrowFunction = (a:number, b:number): number => {
 
 console.log(addWithFunction(1, 2));
 console.log(addWithArrowFunction(1, 2));
+
+
+// ######################################################################################################
+console.log('\n######################### Typescript Type Annotations with Objects');
+
+let employee: {
+ readonly name: string,
+  age: number,
+  salary: number,
+  isMarried: boolean,
+  skills: string[],
+  childern: {
+    one: string,
+    two: string,
+  }
+  }={
+    name: 'John',
+    age: 20,
+    salary: 1000,
+    isMarried: false,
+    skills: ['HTML', 'CSS', 'JS'],
+    childern: {
+      one: 'Jane',
+      two: 'Jack',
+    },
+  };
+  
+// employee.name = 'Jane';
+employee.age = 30;
+
+console.log(employee);
+console.log(employee.name);
+console.log(employee.age);
+
+
+
