@@ -2,6 +2,9 @@
  A repo for practcing typescript langauge 
  
 ## Topics
+### 0. TypeScript Configuration
+- Distribution
+- tsconfig.json & compilerOptions
 ### 1. Type Annotatioons
 - Data Types
 - Arrays
